@@ -44,6 +44,7 @@ $
 $ npm run dev
 $ cd ..
 $ python3 manage.py runserver
+http://localhost:8080/
 ```
 http://localhost:8080/
 
