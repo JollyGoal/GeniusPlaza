@@ -49,7 +49,7 @@ http://localhost:8080/
 http://localhost:8080/
 
 ### Documentation
-Api http://localhost:8000/docs/  // include_docs_urls not supported by django anymore
+Api http://localhost:8000/docs/  ## include_docs_urls not supported by django anymore
 
 
 [Django]: <https://www.djangoproject.com/>
