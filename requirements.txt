@@ -1,0 +1,16 @@
+Django
+certifi
+chardet
+coreapi
+coreschema
+django-cors-headers
+django-easy-pdf
+django-rest-swagger
+django-templated-mail
+django-summernote
+django-webpack-loader
+djangorestframework
+djangorestframework-jsonapi==3.0.0
+djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==4.3.0
+djoser
