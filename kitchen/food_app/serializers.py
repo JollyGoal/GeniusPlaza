@@ -31,7 +31,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
 
 class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Step
+        model = Ingredient
         fields = ('name', 'price')
 
 

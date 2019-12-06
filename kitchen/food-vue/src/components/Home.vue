@@ -29,7 +29,8 @@
         </div>
         <mu-container :class="[progress ? 'app-progress' : '', open_drawer ? 'draw-move': 'draw-return']">
           <mu-container style="padding-top: 80px;">
-            <!--          <Shops v-if="show.shops" @openColorSnackbar="openColorSnackbar"></Shops>-->
+            <Ingredients v-if="show.ingredients" @closeColorProgressbar="closeColorProgressbar"
+               @openColorProgressbar="openColorProgressbar" @openColorSnackbar="openColorSnackbar"></Ingredients>
             <!--          <Products v-if="show.products" @openColorSnackbar="openColorSnackbar"></Products>-->
             <!--          <Order v-if="show.order" :order_num="order_num"></Order>-->
           </mu-container>
@@ -43,21 +44,21 @@
             <br>
             <mu-list>
 
-              <mu-list-item button @click="" :ripple="false">
+              <mu-list-item button @click="" :ripple="true">
                 <mu-list-item-action>
                   <mu-icon value="dashboard" color="grey300"></mu-icon>
                 </mu-list-item-action>
                 <mu-list-item-title style="color: #e0e0e0">Recipes</mu-list-item-title>
               </mu-list-item>
 
-              <mu-list-item button @click="" :ripple="false">
+              <mu-list-item button @click="goIngredients" :ripple="true">
                 <mu-list-item-action>
                   <mu-icon value="shopping_cart" color="grey300"></mu-icon>
                 </mu-list-item-action>
                 <mu-list-item-title style="color: #e0e0e0">Ingredients</mu-list-item-title>
               </mu-list-item>
 
-              <mu-list-item button @click="" :ripple="false">
+              <mu-list-item button @click="" :ripple="true">
                 <mu-list-item-action>
                   <mu-icon value="tablet_android" color="grey300"></mu-icon>
                 </mu-list-item-action>
@@ -70,7 +71,7 @@
             <br>
 
             <mu-list>
-              <mu-list-item button :ripple="false">
+              <mu-list-item button :ripple="true">
                 <mu-icon value="power_settings_new" color="grey300"></mu-icon>
                 <mu-list-item-title style="margin-left: 20px; color: #e0e0e0" @click='logout'>Exit
                 </mu-list-item-title>
@@ -95,12 +96,14 @@
 <script>
   import Login from "./Login";
   import Registration from "./Registration";
+  import Ingredients from "./Ingredients";
 
   export default {
     name: "Home",
     components: {
       Login,
       Registration,
+      Ingredients,
     },
     data() {
       return {
@@ -110,7 +113,7 @@
         show: {
           register: false,
           login: false,
-          shops: false,
+          ingredients: false,
           products: false,
           order_list: false,
           order: false,
@@ -170,8 +173,8 @@
         this.show.login = false;
         this.show.register = true;
       },
-      goShopList() {
-        this.show.shops = true;
+      goIngredients() {
+        this.show.ingredients = true;
         this.show.products = false;
         this.show.order_list = false;
         this.show.order = false;

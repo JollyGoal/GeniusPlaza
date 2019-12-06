@@ -2,8 +2,9 @@ from datetime import datetime
 
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models.signals import pre_save
 from django.utils.text import slugify
+
+# from django.db.models.signals import pre_save
 
 
 def image_folder(instance, filename):
