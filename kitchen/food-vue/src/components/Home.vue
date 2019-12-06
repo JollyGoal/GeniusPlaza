@@ -8,7 +8,8 @@
       </template>
 
       <template v-else-if="show.register">
-        <Registration @goMain="goMain" @openColorSnackbar="openColorSnackbar" @auth="auth"></Registration>
+        <Registration @goMain="goMain" @openColorSnackbar="openColorSnackbar" @closeColorProgressbar="closeColorProgressbar"
+               @openColorProgressbar="openColorProgressbar" @auth="auth"></Registration>
       </template>
 
       <template v-else>
