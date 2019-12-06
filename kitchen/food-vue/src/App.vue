@@ -40,5 +40,7 @@ export default {
 </script>
 
 <style>
-
+  #id {
+    background-color: #303030;
+  }
 </style>
