@@ -74,6 +74,8 @@
             this.$emit('closeColorProgressbar');
             if (response.status === 400) {
               this.openAlertSnackbar('Login or password incorrect');
+            } else {
+              this.openAlertSnackbar(Object.values(response.responseJSON)[0][0]);
             }
           }
         })
